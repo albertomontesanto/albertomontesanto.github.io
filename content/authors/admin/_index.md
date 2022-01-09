@@ -53,7 +53,7 @@ social:
 
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.com/citations?user=P8JWywQAAAAJ&hl
+  link: https://scholar.google.it/citations?user=B8kuAMYAAAAJ&hl=it
 
 - icon: osf
   icon_pack: ai
@@ -67,6 +67,6 @@ superuser: true
 title: Alberto Montesanto
 ---
 
-I am a clinical psychology researcher, currently working to improve the lives of post-deployment veterans. My primary therapeutic orientations are ACT and mindfulness-based interventions. I have had specialty training in the areas of trauma and substance use, but my interests are too broad to consider me a specialist. I also make online resources for data analysis.
+I am a genetic researcher, currently working to improve the lives of post-deployment veterans. My primary therapeutic orientations are ACT and mindfulness-based interventions. I have had specialty training in the areas of trauma and substance use, but my interests are too broad to consider me a specialist. I also make online resources for data analysis.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/A Solomon Kurz CV.pdf" "newtab" >}}CV{{< /staticref >}}.
