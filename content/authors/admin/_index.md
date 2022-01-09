@@ -38,9 +38,9 @@ organizations:
   url: https://www.unical.it/
   role: Professor of Genetic
 
-- name: The Chicago School of Professional Psychology
-  url: https://www.thechicagoschool.edu/learn/los-angeles/?utm_campus=105
-  role: Adjunct Faculty
+- name: University of Calabria
+  url: https://www.unical.it
+  role: Associate Professor
 
 social:
 # - icon: envelope
