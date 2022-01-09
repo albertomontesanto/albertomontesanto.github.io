@@ -1,52 +1,72 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+# Display name
+name: Alberto Montesanto
+
+bio:
+
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: OAA Advanced Postdoctoral Fellow in Mental Illness Research & Treatment
+    institution: VISN 17 Center of Excellence for Research on Returning War Veterans at Central Texas Veterans Healthcare System
+    year: 2020
+  - course: PhD in Clinical Psychology
+    institution: University of Mississippi
+    year: 2018
+  - course: MA in Clinical Psychology
+    institution: University of Mississippi
+    year: 2013
+  - course: BA in Psychology
+    institution: University of Washington
+    year: 2010
+  - course: Diploma
+    institution: Enumclaw High School
+    year: 1998
+    
 email: ""
-highlight_name: true
+highlight_name: false
+
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Acceptance and Commitment Therapy
+- Meditation
+- Idiographic Analyses
+- Applied Statistics
+- Methodology
+- Science Reform
+    
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+- name: VISN 17 Center of Excellence
+  url: https://www.mirecc.va.gov/visn17/
+  role: Clinical Research Psychologist
+
+- name: The Chicago School of Professional Psychology
+  url: https://www.thechicagoschool.edu/learn/los-angeles/?utm_campus=105
+  role: Adjunct Faculty
+
 social:
-- icon: envelope
-  icon_pack: fas
-  link: /#contact
-- display:
-    header: true
-  icon: twitter
+# - icon: envelope
+#   icon_pack: fas
+#   link: /#contact
+
+- icon: twitter
   icon_pack: fab
-  label: Follow me on Twitter
-  link: https://twitter.com/GeorgeCushen
-- icon: graduation-cap
-  icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://twitter.com/SolomonKurz
+
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.com/citations?user=P8JWywQAAAAJ&hl
+
+- icon: osf
+  icon_pack: ai
+  link: https://osf.io/2t7j2/
+  
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://github.com/ASKurz
+  
 superuser: true
-title: Alberto Montesanto 
+title: Alberto Montesanto
 ---
 
-Alberto Montesanto is a professor of genetics at the University of Calabria. His research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am a clinical psychology researcher, currently working to improve the lives of post-deployment veterans. My primary therapeutic orientations are ACT and mindfulness-based interventions. I have had specialty training in the areas of trauma and substance use, but my interests are too broad to consider me a specialist. I also make online resources for data analysis.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/A Solomon Kurz CV.pdf" "newtab" >}}CV{{< /staticref >}}.
