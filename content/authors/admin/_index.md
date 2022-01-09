@@ -38,31 +38,25 @@ organizations:
   url: https://www.unical.it/
   role: Professor of Genetic
 
-- name: University of Calabria
-  url: https://www.unical.it
-  role: Associate Professor
-
 social:
-# - icon: envelope
-#   icon_pack: fas
-#   link: /#contact
-
-- icon: twitter
+- icon: envelope
+  icon_pack: fas
+  link: /#contact
+- display:
+    header: true
+  icon: twitter
   icon_pack: fab
-  link: https://twitter.com/SolomonKurz
-
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.it/citations?user=B8kuAMYAAAAJ&hl=it
-
-- icon: osf
-  icon_pack: ai
-  link: https://osf.io/2t7j2/
-  
+  label: Follow me on Twitter
+  link: https://twitter.com/GeorgeCushen
+- icon: graduation-cap
+  icon_pack: fas
+  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/ASKurz
-  
+  link: https://github.com/gcushen
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/
 superuser: true
 title: Alberto Montesanto
 ---
