@@ -18,7 +18,7 @@ authors:
 date: '2006-11-22'
 doi: https://doi.org/10.1159/000097305
 featured: false
-# To use the `image` argument, add an image named `featured.jpg/png` to your page's folder.
+# To use the `image` argument, add an image named `featured.jpg` to your page's folder.
 # focal_point: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: ''
