@@ -1,15 +1,22 @@
 ---
-title: 'Between-session practice and therapeutic alliance as predictors of mindfulness after mindfulness-based relapse prevention'
+title: 'Sex and age specificity of susceptibility genes modulating survival at old age'
 
 # for `authors`, if you use `admin` instead of your publicaiton name,
 # the page will include a thumbnail of your pic and basic info,
 # kinda like a mini home page
 authors:
-- Sarah Bowen
-- admin
+- Passarino G, 
+- Montesanto A
+- Dato S
+- Giordano S
+- Domma F
+- Mari V
+- Feraco E
+- De Benedictis G
 
-date: '2012-03-01'
-doi: https://doi.org/10.1002/jclp.20855
+
+date: '2006-11-22'
+doi: https://doi.org/10.1159/000097305
 featured: false
 # To use the `image` argument, add an image named `featured.jpg/png` to your page's folder.
 # focal_point: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -19,19 +26,18 @@ image:
   preview_only: false
 # `projects` can associate this post with one or more of your projects
 projects: []
-publication: '*Journal of Clinical Psychology*'
+publication: '*Human Heredity*'
 publication_types:
 - 2
-publishDate: '2012-03-01'
+publishDate: '2006-11-22'
 slides: ''
 summary: ''
 # `tags` are like keywords
 tags:
-- Mindfulness
-- homework
-- home practice
-- therapeutic alliance
-- substance abuse
+- Logistic regression
+- Longevity
+- Multilocus analysis
+- Survival phenotype
 
 url_code: ""
 url_dataset: ""
@@ -42,10 +48,7 @@ url_slides: ""
 url_source: ""
 url_video: ""
 
-links:
-  - name: OSF
-    url: 'https://osf.io/2df7u/'
     
-abstract: 'Objectives: Mindfulness-based treatments have demonstrated efficacy in reducing symptoms in clinical populations. Not surprisingly, research suggests increases in client mindfulness might be a mechanism of change in these treatments. However, little is known about specific factors that lead to increased mindfulness. Design: The present study is a secondary analysis of 93 adults in outpatient treatment for substance abuse, assessing effects of between-session mindfulness practice and therapeutic alliance on levels of mindfulness after an 8-week Mindfulness-Based Relapse Prevention (MBRP) program. Results: Between-session practice over the course of the 8 weeks was predictive of mindfulness at postcourse, although not at the 2-month or 4-month follow-up assessments. Client-rated therapeutic alliance was a significant predictor at the 2-month follow-up, although not at 4 months. Conclusions: These findings suggest that between-session practice and therapeutic alliance might be important factors in the initial increases in mindfulness after mindfulness-based treatments, but factors supporting longer term mindfulness might shift over time.'
+abstract: 'Objective: We aimed to investigate the influence of the genetic variability of candidate genes on survival at old age in good health. Methods: First, on the basis of a synthetic survival curve constructed using historic mortality data taken from the Italian population from 1890 onward, we defined three age classes ranging from 18 to 106 years. Second, we assembled a multinomial logistic regression model to evaluate the effect of dichotomous variables (genotypes) on the probability to be assigned to a specific category (age class). Third, we applied the regression model to a cross-sectional dataset (10 genes; 972 subjects selected for healthy status) categorized according to age and sex. Results: We found that genetic factors influence survival at advanced age in good health in a sex- and age-specific way. Furthermore, we found that genetic variability plays a stronger role in males than in females and that, in both genders, its impact is especially important at very old ages. Conclusions: The analyses presented here underline the age-specific effect of the gene network in modulating survival at advanced age in good health.'
 ---
 
