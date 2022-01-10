@@ -29,7 +29,7 @@ image:
   preview_only: false
 # `projects` can associate this post with one or more of your projects
 projects: []
-publication: '*Molecules*'
+publication: '*Psychiatric Genetics*'
 publication_types:
 - 2
 publishDate: '2021-12-01'
