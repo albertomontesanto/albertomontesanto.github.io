@@ -23,7 +23,7 @@ featured: false
 image:
   caption: ''
   focal_point: ''
-  preview_only: false
+  preview_only: true
 # `projects` can associate this post with one or more of your projects
 projects: []
 publication: '*Human Heredity*'
