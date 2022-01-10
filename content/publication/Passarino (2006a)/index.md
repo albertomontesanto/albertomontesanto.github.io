@@ -41,7 +41,7 @@ tags:
 
 url_code: ""
 url_dataset: ""
-url_pdf: "pdf/Bowen & Kurz (2012) Between-session practice and therapeutic alliance as predictors of mindfulness after mindfulness-based relapse prevention.pdf"
+url_pdf: "pdf/Passarino (2006a) Passarino_2006a.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""
