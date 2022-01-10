@@ -32,7 +32,8 @@ interests:
 organizations:
 - name: University of Calabria
   url: https://www.unical.it/
-  role: Professor of Genetic
+  
+role: Professor of Genetics
 
 social:
 - icon: envelope
