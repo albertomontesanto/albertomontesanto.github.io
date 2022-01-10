@@ -1,8 +1,8 @@
 ---
 date: "2021-01-24"
-linkTitle: Data Science
+linkTitle: Basics of DNA Forensics Techniques for master’s degree students in Biology; 
 summary: An example of using Wowchemy's Book layout for publishing online courses.
-title: "\U0001F4CA Learn Data Science"
+title: "Basics of DNA Forensics Techniques"
 type: book
 ---
 
@@ -12,21 +12,20 @@ type: book
 
 ## What you will learn
 
-- Fundamental {{<hl>}}Python programming skills{{</hl>}}
-- {{<hl>}}Statistical concepts{{</hl>}} and how to apply them in practice
-- Gain experience with the {{<hl>}}Scikit{{</hl>}}, including data visualization with {{<hl>}}Plotly{{</hl>}} and data wrangling with {{<hl>}}Pandas{{</hl>}}
+- Specific objectives: by the end of the course, the student should be able to:
+appreciate the importance of genetics to health and disease; to construct and interpret a family history in the form of a pedigree; to explain the recurrence risk for each form of inheritance for individuals in the family. 
+- The students will also become familiar with multiple approaches to the analysis of complex traits; able to analyze and solve problems related to the analysis of DNA profiling for individual identification and parentage analyses.
+
+Transversal skills, and in particular:
+- ability to solve problems through the analysis of case-studies;
+- capability to collaborate in small groups, sharing and showing the work done;
+- ability to integrate the knowledge acquired during human genetics courses to analyze and understand some current research topics of modern genetics research.
 
 ## Program overview
 
-The demand for skilled data science practitioners is rapidly growing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.
+Genetic variability and its consequences. Mitochondrial genetics. Epigenetics. Association studies on a wide scale. Personalized medicine: test for the susceptibility to complex diseases. Introduction to forensic genetics.
 
-## Courses in this program
 
-{{< list_children >}}
-
-## Meet your instructor
-
-{{< mention "admin" >}}
 
 ## FAQs
 
