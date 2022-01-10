@@ -6,32 +6,28 @@ bio:
 
 education:
   courses:
-  - course: OAA Advanced Postdoctoral Fellow in Mental Illness Research & Treatment
-    institution: VISN 17 Center of Excellence for Research on Returning War Veterans at Central Texas Veterans Healthcare System
-    year: 2020
-  - course: PhD in Clinical Psychology
-    institution: University of Mississippi
-    year: 2018
-  - course: MA in Clinical Psychology
-    institution: University of Mississippi
-    year: 2013
-  - course: BA in Psychology
-    institution: University of Washington
-    year: 2010
-  - course: Diploma
-    institution: Enumclaw High School
-    year: 1998
+  - course: II level University Master Degree in Computational and Supercomputing Sciences 
+    institution: University of Calabria
+    year: 2008
+  - course: PhD in Molecular Bio-pathology 
+    institution: UUniversity of Calabria
+    year: 2007
+  - course: MA in Biological Sciences 
+    institution: University of Calabria
+    year: 2003
+
+
+
     
 email: "alberto.montesanto@unical.it"
 highlight_name: false
 
 interests:
 - Forensic Genetics
-- Meditation
-- Idiographic Analyses
+- Epigenetics of human ageing
+- Genetics of human ageing
 - Applied Statistics
 - Methodology
-- Science Reform
     
 organizations:
 - name: University of Calabria
@@ -61,6 +57,6 @@ superuser: true
 title: Alberto Montesanto
 ---
 
-I am a genetic researcher, currently working to improve the lives of post-deployment veterans. My primary therapeutic orientations are ACT and mindfulness-based interventions. I have had specialty training in the areas of trauma and substance use, but my interests are too broad to consider me a specialist. I also make online resources for data analysis.
+I am a professor of genetics, currently working to (i) the analysis of the role of human nuclear and mitochondrial DNA sequence variations in human aging and longevity; (ii) the analysis of the role of epigenetic variability of nuclear and mitochondrial loci in human aging and longevity; (iii) develop new statistical methods for disentangling the complex genetic and epigenetic networks affecting the ageing process in human population; (iv) the analysis of DNA to predict externally visible characteristics of unknown sample donors or deceased persons on the basis of genetic and epigenetic markers (forensic DNA Phenotyping).
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/A Solomon Kurz CV.pdf" "newtab" >}}CV{{< /staticref >}}.
