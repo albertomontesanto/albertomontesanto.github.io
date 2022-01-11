@@ -22,10 +22,8 @@ A brief history of the development of forensic genetics. Human genetic variation
 
 Students in this course should strive to meet the following objectives: 
 
-1) Demonstrate a basic familiarity with the ﬁeld of comparative political economy. 
-2) Leverage differences between countries or regions to analyze the effects of institutions on economic outcomes and vice-versa. 
-3) Demonstrate how historical legacies shape contemporary political and economic outcomes. 
-4) Discern basic differences in institutional and economic structures shape how countries interact with the global economy.
+1) Demonstrate a basic familiarity with the theoretical and practical concepts for the understanding and the resolution of forensic genetics problems. 
+2) Demonstrate ability to analyze and solve problems related to the analysis of DNA profiling for individual identification and parentage analyses. 
 
 
 ## Course Requirements
