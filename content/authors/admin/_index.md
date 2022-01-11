@@ -12,7 +12,7 @@ education:
   - course: PhD in Molecular Bio-pathology 
     institution: UUniversity of Calabria
     year: 2007
-  - course: MA in Biological Sciences 
+  - course: MSc in Biological Sciences 
     institution: University of Calabria
     year: 2003
 
@@ -26,8 +26,7 @@ interests:
 - Forensic Genetics
 - Epigenetics of human ageing
 - Genetics of human ageing
-- Applied Statistics
-- Methodology
+- Data Analysis and visualization
     
 organizations:
 - name: University of Calabria
