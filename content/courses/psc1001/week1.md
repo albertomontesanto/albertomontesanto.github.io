@@ -1,5 +1,5 @@
 ---
-title: Comparative Politics and the Comparative Method
+title: Quantitative Genetics
 linktitle: Week 1
 lastmod: "2021-06-01"
 draft: false  
@@ -10,7 +10,7 @@ weight: 20
 
 ## Content
 
-In **module 1.1**, we will be discussing an overview of comparative politics. First, we will talk about some of the most important theoretical perspectives in the discipline, emphasizing the role of institutions in politics. Second, we will discuss the important elements of an explanation in political science: independent variables, dependent variables and causal mechanisms. You will complete a causal diagram exercise with a partner to practice this concept.Third, we’ll talk about the difference between correlation and causation, or in other words how variables are sometimes related to one another through a causal relationship whereas at other times the relationship between two variables is purely spurious.
+In **module 1.1**, we will be discussing an overview of Quantitative Genetics. First, we will talk about some of the most important theoretical 
 
 In **module 1.2**, we will be discussing the comparative method. In this module we’ll be looking at the role of hypotheses in comparative politics and how they can be tested using a handful of simple methodological tools that harness variation in independent and dependent variables across country or regional cases.
 
