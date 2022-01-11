@@ -41,27 +41,15 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/apreshill
-- icon: impactstory
-  icon_pack: ai
-  link: https://impactstory.org/u/0000-0002-8082-1890
 - icon: orcid
   icon_pack: ai
   link: http://orcid.org/0000-0002-8082-1890
-- icon: linkedin-in
-  icon_pack: fab
-  link: https://www.linkedin.com/in/alisonpresmaneshill/
-- icon: keybase
-  icon_pack: fab
-  link: https://keybase.io/alisonhill
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.co.uk/citations?hl=en&user=B8kuAMYAAAAJ
 - icon: facebook
   icon_pack: fab
   link: https://www.facebook.com/alberto.montesanto
-- icon: orcid
-  icon_pack: ai
-  link: http://orcid.org/0000-0002-8082-1890
 
 
  
