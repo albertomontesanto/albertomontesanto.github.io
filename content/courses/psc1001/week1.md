@@ -10,24 +10,18 @@ weight: 20
 
 ## Content
 
-In **module 1.1**, we will be discussing an overview of Quantitative Genetics. First, we will talk about some of the most important theoretical 
+In **module 1**, we will be discussing an overview of Quantitative Genetics. First, we will talk about some of the most important theoretical 
 
-In **module 1.2**, we will be discussing the comparative method. In this module we’ll be looking at the role of hypotheses in comparative politics and how they can be tested using a handful of simple methodological tools that harness variation in independent and dependent variables across country or regional cases.
 
-In both modules you will be reading relevant articles and textbook chapters, as well as watch lecture and supporting videos that relay important information about the concepts listed above. You will then take a quiz to ensure you have understood what you read. These quizzes will help prepare you for the final exam.
+In this module you will be reading relevant articles and textbook chapters, as well as watch lecture and supporting videos that relay important information about the concepts listed above. You will then take a quiz to ensure you have understood what you read. These quizzes will help prepare you for the final exam.
 
 ## Objectives
 
 By the end of unit, you should be able to:
 
-Explain the difference between an independent and dependent variable. (Course objective 1)
+appreciate the importance of genetics to health and disease; to construct and interpret a family history in the form of a pedigree; 
 
-Demonstrate how “causal mechanisms” link independent and dependent variables. (Course objectives 1, 2, & 4)
+explain the recurrence risk for each form of inheritance for individuals in the family. 
 
-Devise an appropriate test for whether a causal relationship between a dependent and independent variable exists. (Course objective 6)
 
-## Lecture Slides
 
-<a href="https://www.emmanuelteitelbaum.com/slides/psc1001_1.1/#/" target="_blank" rel="noopener" title="Slides">Module 1.1 Slides</a>
-
-<a href="https://www.emmanuelteitelbaum.com/slides/psc1001_1.2/#/" target="_blank" rel="noopener" title="Slides">Module 1.2 Slides</a>
