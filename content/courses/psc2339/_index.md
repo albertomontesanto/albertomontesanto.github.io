@@ -35,4 +35,3 @@ Students in this course should strive to meet the following objectives:
 3) Quizzes (10%) 
 4) Participation (5%)
 
-{{% staticref "pdf/cpesyllabus.pdf" "newtab" %}}VIEW THE SYLLABUS{{% /staticref %}}
