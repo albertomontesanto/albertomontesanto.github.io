@@ -1,9 +1,9 @@
 ---
 date: "2021-01-08"
 lastmod: "2021-01-09"
-title: "APPLIED HUMAN GENETICS"
+title: "PSC 2339: Comparative Political Economy"
 linktitle: Overview
-summary: A survey course in genetic variability and its consequences. Mitochondrial genetics. Epigenetics. Association studies on a wide scale. Personalized medicine: test for the susceptibility to complex diseases. Introduction to forensic genetics. 
+summary: A survey course in comparative political economy. Explores important topics in the field through current events and by looking at the United States in comparative perspective. 
 toc: false
 draft: false
 menu:
@@ -20,11 +20,12 @@ This is a survey course in comparative political economy, a ﬁeld of inquiry wi
 
 ## Learning Objectives
 
-Students in this course should strive to meet the following specific objectives: appreciate the importance of genetics to health and disease; to construct and interpret a family history in the form of a pedigree; to explain the recurrence risk for each form of inheritance for individuals in the family. The students will also become familiar with multiple approaches to the analysis of complex traits; able to analyze and solve problems related to the analysis of DNA profiling for individual identification and parentage analyses.
-Students in this course should strive to meet the following Transversal skills
-- ability to solve problems through the analysis of case-studies;
-- capability to collaborate in small groups, sharing and showing the work done;
-- ability to integrate the knowledge acquired during human genetics courses to analyze and understand some current research topics of modern genetics research.
+Students in this course should strive to meet the following objectives: 
+
+1) Demonstrate a basic familiarity with the ﬁeld of comparative political economy. 
+2) Leverage differences between countries or regions to analyze the effects of institutions on economic outcomes and vice-versa. 
+3) Demonstrate how historical legacies shape contemporary political and economic outcomes. 
+4) Discern basic differences in institutional and economic structures shape how countries interact with the global economy.
 
 
 ## Course Requirements
@@ -33,3 +34,5 @@ Students in this course should strive to meet the following Transversal skills
 2) Report and presentation (25%) 
 3) Quizzes (10%) 
 4) Participation (5%)
+
+{{% staticref "pdf/cpesyllabus.pdf" "newtab" %}}VIEW THE SYLLABUS{{% /staticref %}}
