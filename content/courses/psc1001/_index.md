@@ -1,7 +1,7 @@
 ---
 date: "2021-01-08"
 lastmod: "2021-01-09"
-title: "PSC 1001: Introduction to Comparative Politics"
+title: "APAPPLIED HUMAN GENETICS"
 linktitle: Overview
 summary: An introduction to the field of comparative politics and the comparative method. Required course for GWU PSC and IAFF majors.  
 toc: false
@@ -16,17 +16,16 @@ weight: 10
 
 ## Course Description
 
-Why are some countries democratic and others dictatorships? Why do civil wars occur in some countries and not others? How does history impact the political and economic stability of nations? These are some of the questions addressed by scholars working in the field of comparative politics, which is defined by its focus on political questions that can be answered through cross-country comparison. In this course, we will explore the field of comparative politics through a survey of issue areas, including state capacity, nation-building, ethnic conflict, democratic and authoritarian regimes, transitions to democracy, terrorism and insurgency, and economic development. 
+Genetic variability and its consequences. Mitochondrial genetics. Epigenetics. Association studies on a wide scale. Personalized medicine: test for the susceptibility to complex diseases. Introduction to forensic genetics. 
 
 ## Learning Objectives
 
-This class satisfies G-PAC requirements in critical thinking and cross-cultural perspectives. In this class, you will:
-
-- Learn and critically analyze fundamental concepts in political science and comparative politics;
-- Apply these concepts in a variety of countries;
-- Learn how historical, societal, and cultural differences influence the practice of politics; 
-- Compare the differences between regime types and their impact on political, economic, and social outcomes;
-- Demonstrate your knowledge through analytical papers, writing exercises and one term paper, along with an intensive peer review process.
+Specific objectives: by the end of the course, the student should be able to:
+appreciate the importance of genetics to health and disease; to construct and interpret a family history in the form of a pedigree; to explain the recurrence risk for each form of inheritance for individuals in the family. The students will also become familiar with multiple approaches to the analysis of complex traits; able to analyze and solve problems related to the analysis of DNA profiling for individual identification and parentage analyses.
+Transversal skills, and in particular:
+- ability to solve problems through the analysis of case-studies;
+- capability to collaborate in small groups, sharing and showing the work done;
+- ability to integrate the knowledge acquired during human genetics courses to analyze and understand some current research topics of modern genetics research.
 
 ## Course Requirements
 
