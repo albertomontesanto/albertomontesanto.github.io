@@ -1,6 +1,6 @@
 ---
-title: States, State Capacity and State Fragility
-linktitle: Week 3
+title: Personalized medicine- testing for susceptibility to complex diseases
+linktitle: Module 3
 lastmod: "2021-06-01"
 draft: false  
 toc: false  
