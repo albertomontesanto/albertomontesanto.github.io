@@ -3,7 +3,7 @@ date: "2021-01-08"
 lastmod: "2021-01-09"
 title: "APAPPLIED HUMAN GENETICS"
 linktitle: Overview
-summary: An introduction to the field of comparative politics and the comparative method. Required course for GWU PSC and IAFF majors.  
+summary: An introduction to the field of genetic variability and its consequences  
 toc: false
 draft: false
 menu:
@@ -16,7 +16,7 @@ weight: 10
 
 ## Course Description
 
-Genetic variability and its consequences. Mitochondrial genetics. Epigenetics. Association studies on a wide scale. Personalized medicine: test for the susceptibility to complex diseases. Introduction to forensic genetics. 
+Genetic variability and its consequences. Mitochondrial genetics. Epigenetics. Association studies on a wide scale. Personalized medicine: test for the susceptibility to complex diseases. Introduction to forensic genetics.
 
 ## Learning Objectives
 
