@@ -39,8 +39,8 @@ social:
   icon_pack: fas
   link: /#contact
 - display:
-    header: true
-  icon: twitter
+  header: true
+- icon: twitter
   icon_pack: fab
   label: Follow me on Twitter
   link: https://twitter.com/GeorgeCushen
@@ -50,11 +50,12 @@ social:
 - icon: facebook
   icon_pack: fab
   link: https://www.facebook.com/alberto.montesanto
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/
-superuser: true
-title: 
+- icon: orcid
+  icon_pack: ai
+  link: http://orcid.org/0000-0002-8082-1890
+
+
+ 
 ---
 
 I am a professor of genetics, currently working to (i) the analysis of the role of human nuclear and mitochondrial DNA sequence variations in human aging and longevity; (ii) the analysis of the role of epigenetic variability of nuclear and mitochondrial loci in human aging and longevity; (iii) the development of new statistical methods for disentangling the complex genetic and epigenetic networks affecting the ageing process in human population; (iv) the analysis of DNA to predict externally visible characteristics of unknown sample donors or deceased persons on the basis of genetic and epigenetic markers (forensic DNA Phenotyping).
