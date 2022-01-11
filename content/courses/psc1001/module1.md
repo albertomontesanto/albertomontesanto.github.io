@@ -1,6 +1,6 @@
 ---
 title: Quantitative Genetics
-linktitle: Week 1
+linktitle: Module 1
 lastmod: "2021-06-01"
 draft: false  
 toc: false  
@@ -19,9 +19,9 @@ In this module you will be reading relevant articles and textbook chapters, as w
 
 By the end of unit, you should be able to:
 
-appreciate the importance of genetics to health and disease; to construct and interpret a family history in the form of a pedigree; 
+- appreciate the importance of genetics to health and disease; to construct and interpret a family history in the form of a pedigree; 
 
-explain the recurrence risk for each form of inheritance for individuals in the family. 
+- explain the recurrence risk for each form of inheritance for individuals in the family. 
 
 
 

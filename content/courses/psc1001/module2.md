@@ -1,6 +1,6 @@
 ---
 title: Genome-wide association studies
-linktitle: Week 2
+linktitle: Module 2
 lastmod: "2021-06-01"
 draft: false  
 toc: false  
@@ -18,7 +18,7 @@ In this module you will be reading relevant articles and textbook chapters, as w
 
 By the end of unit, you should be able to:
 
-xx
-yy
+- xx
+- yy
 
 
