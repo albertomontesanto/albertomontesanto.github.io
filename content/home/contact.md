@@ -4,7 +4,7 @@
 widget: contact
 
 # Activate this widget? true/false
-active: true
+active: false
 
 # This file represents a page section.
 headless: true
@@ -24,5 +24,9 @@ content:
 #   0: Disable email form
 #   1: Netlify (requires that the site is hosted by Netlify)
 #   2: formspree.io
-email_form: 1
+content:
+  form:
+    provider: formspree
+    formspree:
+      id: xqknekzq
 ---
