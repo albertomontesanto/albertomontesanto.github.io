@@ -7,7 +7,7 @@ widget: contact
 headless: true
 
 # Order that this section appears on the page.
-weight: 100
+weight: 130
 
 title: Contact
 subtitle:
@@ -17,6 +17,14 @@ content:
   autolink: true
   
   # Email form provider
-email_form : 2
-id: "xqknekzq"
+  form:
+    provider: formspree
+    formspree:
+      id: "xqknekzq"
+    netlify:
+      # Enable CAPTCHA challenge to reduce spam?
+      captcha: false
+  
+design:
+  columns: '2'
 ---
