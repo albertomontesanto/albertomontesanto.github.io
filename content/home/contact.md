@@ -12,21 +12,22 @@ headless: true
 # Order that this section appears on the page.
 weight: 130
 
-title: Contact me
+title: Contact
 subtitle:
 
 content:
   # Automatically link email and phone or display as text?
   autolink: true
   
-
-# Email form provider
-#   0: Disable email form
-#   1: Netlify (requires that the site is hosted by Netlify)
-#   2: formspree.io
-content:
+  # Email form provider
   form:
     provider: formspree
     formspree:
       id: xqknekzq
+    netlify:
+      # Enable CAPTCHA challenge to reduce spam?
+      captcha: false
+  
+design:
+  columns: '2'
 ---

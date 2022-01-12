@@ -17,5 +17,5 @@ main:
     url: courses/
     weight: 40
   - name: Contact
-    url: 'form/'
+    url: form/
     weight: 50
