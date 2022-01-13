@@ -4,7 +4,7 @@
 widget: portfolio
 
 # Activate this widget? true/false
-active: false
+active: true
 # This file represents a page section.
 headless: true
 
@@ -29,14 +29,16 @@ content:
   filter_button:
   - name: All
     tag: '*'
-  - name: Deep Learning
-    tag: Deep Learning
-  - name: Other
-    tag: Demo
+  - name: Forensic Genetics
+    tag: Forensic Genetics
+  - name: Human ageing
+    tag: Human ageing
+  - name: COVID-19
+    tag: COVID-19
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
-  columns: '2'
+  columns: '3'
 
   # Toggle between the various page layout types.
   #   1 = List
