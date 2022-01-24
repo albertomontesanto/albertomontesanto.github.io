@@ -37,13 +37,10 @@ role: Professor of Genetics
 social:
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/apreshill
-- icon: github
-  icon_pack: fab
-  link: https://github.com/apreshill
+  link: #https://twitter.com/apreshill
 - icon: orcid
   icon_pack: ai
-  link: http://orcid.org/0000-0002-8082-1890
+  link: https://orcid.org/0000-0002-9563-2216
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.co.uk/citations?hl=en&user=B8kuAMYAAAAJ
