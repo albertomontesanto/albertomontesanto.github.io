@@ -15,8 +15,7 @@ weight: 10
 ---
 
 ## Course Description
-
-Genetic variability and its consequences. Mitochondrial genetics. Epigenetics. Association studies on a wide scale. Personalized medicine: test for the susceptibility to complex diseases. Introduction to forensic genetics.
+The Applied Human Genetics course is structured in four parts. The first part aims at making students familiar with human genetic variability and its consequences. The second part analyze the methodological issues and new developments in the context of Genome-wide Association Studies (GWAS). The third part aims at making students familiar with the personalized medicine and in particular with testing for susceptibility to complex diseases. Finally, the purpose of the last  topic is to analyze the most recent advances in forensic DNA. Modern DNA typing technology has opened new possibilities to perform human identity testing for the determination of perpetrators of violent crimes such as murder and sexual assault, and identification of remains of missing persons or victims of mass disasters and paternity testing.
 
 ## Learning Objectives
 

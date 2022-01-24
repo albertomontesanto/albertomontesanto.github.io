@@ -5,7 +5,7 @@ title: 'Sex and age specificity of susceptibility genes modulating survival at o
 # the page will include a thumbnail of your pic and basic info,
 # kinda like a mini home page
 authors:
-- Passarino G, 
+- Passarino G
 - Montesanto A
 - Dato S
 - Giordano S
