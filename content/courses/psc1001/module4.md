@@ -10,7 +10,7 @@ weight: 50
 
 ## Content
 
-In **module 4** we are going to be talking about regime type, trends in democracy, and the “third wave” of democratization that brought free and fair elections, as well as civil liberties, to many countries in the developing world.
+In **module 4** we are going to be talking about the use of DNA variants both in criminal investigations and family disputes. Fisrstly, we will talkk about the pioneering work of the British scientist Alec Jeffreys and 
 
 In this module you will be reading relevant articles and textbook chapters, as well as watch lecture and supporting videos that relay important information about the concepts listed above. You will then take a quiz to ensure you have understood what you read. These quizzes will prepare you for the final exam. 
 
