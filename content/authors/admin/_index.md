@@ -52,6 +52,6 @@ social:
  
 ---
 
-I am a professor of genetics, currently working to (i) the analysis of the role of human nuclear and mitochondrial DNA sequence variations in human aging and longevity; (ii) the analysis of the role of epigenetic variability of nuclear and mitochondrial loci in human aging and longevity; (iii) the development of new statistical methods for disentangling the complex genetic and epigenetic networks affecting the ageing process in human population; (iv) the analysis of DNA to predict externally visible characteristics of unknown sample donors or deceased persons on the basis of genetic and epigenetic markers (forensic DNA Phenotyping).
+I am a professor of genetics, currently working to the analysis of the role of human nuclear and mitochondrial DNA (epi)genetic variations in human aging and longevity. My research interest is also focused on the analysis of DNA variability to predict externally visible characteristics of unknown sample donors or deceased persons on the basis of genetic and epigenetic markers (forensic DNA Phenotyping).
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/CV.pdf" "newtab" >}}CV{{< /staticref >}}.
