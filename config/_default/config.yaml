@@ -1,11 +1,10 @@
-theme: "starter-hugo-academic"
 # Configuration of Hugo
 # Guide: https://wowchemy.com/docs/getting-started/
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: Alberto Montesanto # Website name
-baseurl: 'https://albertomontesanto.netlify.app/' # Website URL
+baseurl: 'https://albertomontesanto.github.io/blogdown/' # Website URL
 copyright: '© Alberto Montesanto (2022)'
 
 ############################
