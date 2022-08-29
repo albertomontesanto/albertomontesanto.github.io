@@ -2,14 +2,14 @@
 title: "A new approach to broaden the range of eye colour identifiable by IrisPlex in DNA phenotyping"
 
 authors: 
--Paparazzo E
--Gozalishvili A
--Lagani V
--Geracitano S
--Bauleo A
--Falcone E
--Passarino G
--Montesanto A
+- Paparazzo E
+- Gozalishvili A
+- Lagani V
+- Geracitano S
+- Bauleo A
+- Falcone E
+- Passarino G
+- Montesanto A
 
 date: '2022-07-27'
 doi: https://doi.org/10.1038/s41598-022-17208-w.

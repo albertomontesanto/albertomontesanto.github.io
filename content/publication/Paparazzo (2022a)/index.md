@@ -3,16 +3,16 @@ title: "Clinical Implications of Estimating Glomerular Filtration Rate in Instit
 date: 2021-01-28
 publishDate: 2021-01-05T20:13:52.623034Z
 authors: 
--Paparazzo E
--Geracitano S
--Lagani V
--Soraci L
--Cozza A
--Cosimo S
--Morelli F
--Corsonello A
--Passarino G
--Montesanto A
+- Paparazzo E
+- Geracitano S
+- Lagani V
+- Soraci L
+- Cozza A
+- Cosimo S
+- Morelli F
+- Corsonello A
+- Passarino G
+- Montesanto A
 
 date: '2022-04-26'
 doi: https://doi.org/10.3389/fmed.2022.870835
@@ -34,10 +34,10 @@ summary: ''
 # `tags` are like keywords
 tags:
 - Berlin initiative study (BIS); 
--chronic kidney disease (CKD); 
--estimated glomerular filtration rate (eGFR); 
--full age spectrum (FAS); 
--older patients.
+- chronic kidney disease (CKD); 
+- estimated glomerular filtration rate (eGFR); 
+- full age spectrum (FAS); 
+- older patients.
 
 
 url_code: ""
@@ -60,4 +60,3 @@ Results: Depending on the adopted equation, the prevalence of NH residents with 
 
 Conclusion: Despite the relatively good correlation between eGFRs calculated using all adopted equations, the findings in this study reported clearly demonstrated that CKD-EPI and BIS/FAS equations are not interchangeable to assess eGFR among older people and particularly in institutionalized and frail older subjects.'
 ---
-
