@@ -25,7 +25,7 @@ image:
   preview_only: true
 # `projects` can associate this post with one or more of your projects
 projects: []
-publication: '* Front Med (Lausanne)*'
+publication: '*Front Med (Lausanne)*'
 publication_types:
 - 2
 publishDate: '2022-04-26'
