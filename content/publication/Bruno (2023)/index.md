@@ -27,7 +27,7 @@ image:
   preview_only: true
 # `projects` can associate this post with one or more of your projects
 projects: []
-publication: '* Ageing research reviews*'
+publication: '*Ageing research reviews*'
 publication_types:
 - 2
 publishDate: '2023-09-12'
