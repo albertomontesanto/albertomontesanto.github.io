@@ -7,7 +7,7 @@ image:
 summary: Prova 2 brief description`external_link`.
 tags:
 - Human ageing
-title: Studio sugli effetti della dieta mima digiuno e della dieta della longevità sulla salute umana:
+title: Studio sugli effetti della dieta mima digiuno e della dieta della longevità sulla salute umana.
 La nostra equipe scientifica che supporta la Fondazione Valter Longo per la conduzione di uno studio clinico finanziato dalla Regione Calabria per la valutazione gli effetti di una dieta mima-digiuno e della dieta della longevità sulla salute umana. Lo studio clinico è registrato su clinicaltrials.gov con ID NCT05698654.
 
 
