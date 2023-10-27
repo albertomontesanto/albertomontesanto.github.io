@@ -28,7 +28,7 @@ image:
   preview_only: true
 # `projects` can associate this post with one or more of your projects
 projects: []
-publication: '*Annals of human genetics*'
+publication: '*Immunity & Ageing*'
 publication_types:
 - 2
 publishDate: '2023-04-10'

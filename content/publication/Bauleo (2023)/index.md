@@ -5,16 +5,16 @@ title: '7p22.2 Microduplication: A Pathogenic CNV?'
 # the page will include a thumbnail of your pic and basic info,
 # kinda like a mini home page
 authors:
-- Alessia B
-- Alberto M
-- Vincenza P
-- Francesco G
-- Rosalbina A
-- Rossella B
-- Laura DS
-- Simona S
-- Daniela C
-- Elena F
+- Bauleo A
+- Montesanto A
+- Pace V
+- Guarasci F
+- Apa R
+- Brando R
+- De Stefano L
+- Sestito S
+- Concolino D
+- Falcone E
 
 date: '2023-06-19'
 doi: https://doi.org/10.3390/genes14061292
