@@ -10,7 +10,7 @@ links:
   name: Follow
   url: https://twitter.com/georgecushen
 slides: example
-summary: Prova 1.
+summary: Al via il progetto AGE-IT, finanziato dal PNRR con 114 milioni di euro, che vedrà impegnati 17 gruppi di ricerca dell'Università della Calabria.
 tags:
 - AGE-IT
 title: AGE-IT

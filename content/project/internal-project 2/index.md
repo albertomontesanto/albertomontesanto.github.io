@@ -10,7 +10,7 @@ links:
   name: Follow
   url: https://twitter.com/georgecushen
 slides: example
-summary: PCOVID
+summary: enetic and epigenetic modulAtors in Rare neurodegenerative diseases with DEmentia: a National study on autosomal dominant Alzheimer disease and genetic frontotemporal degeneration with dementIA (GARDENIA)
 tags:
 - GARDENIA
 title: GARDENIA 
