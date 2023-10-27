@@ -12,7 +12,7 @@ links:
 slides: example
 summary: Al via il progetto AGE-IT, finanziato dal PNRR con 114 milioni di euro, che vedrà impegnati 17 gruppi di ricerca dell'Università della Calabria.
 tags:
-- AGE-IT
+- 
 title: AGE-IT
 url_code: ""
 url_pdf: ""
