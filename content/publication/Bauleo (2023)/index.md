@@ -1,5 +1,5 @@
 ---
-title: 'Thymic function and survival at advance ages in nursing home residents from Southern Italy'
+title: '7p22.2 Microduplication: A Pathogenic CNV?'
 
 # for `authors`, if you use `admin` instead of your publicaiton name,
 # the page will include a thumbnail of your pic and basic info,
