@@ -2,7 +2,7 @@
 date: "2016-04-27T00:00:00Z"
 external_link: ""
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: AGE-IT
   focal_point: Smart
 links:
 - icon: twitter
@@ -12,12 +12,12 @@ links:
 slides: example
 summary: Prova 1.
 tags:
-- Forensic Genetics
-title: Forensic Genetics
+- AGE-IT
+title: AGE-IT
 url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
 
-Descrivere qui
+AGE-IT è un progetto di ricerca che conta su un finanziamento del Piano Nazionale di Recupero e Resilienza (PNRR) di 114 milioni di euro. Si avvale della partecipazione di ben 350 esperti nei diversi settori scientifici impegnati da tempo nelle diverse sfide poste dall’invecchiamento della popolazione italiana ed europea. Un raggruppamento vastissimo di competenze, quindi, al lavoro per studiare l’evoluzione della nostra società disegnando le possibili linee di intervento, da tutti i punti di vista: sociale, economico, biomedico e tecnologico.
