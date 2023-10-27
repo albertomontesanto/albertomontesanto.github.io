@@ -29,11 +29,11 @@ content:
   filter_button:
   - name: All
     tag: '*'
-  - name: Forensic Genetics
-    tag: Forensic Genetics
-  - name: Human ageing
-    tag: Human ageing
-  - name: COVID-19
+  - name: GARDENIA
+    tag: 
+  - name: AGE-IT
+    tag: 
+  - name: Dietà della longevità
     tag: COVID-19
 
 design:
@@ -45,7 +45,7 @@ design:
   #   2 = Compact
   #   3 = Card
   #   5 = Showcase
-  view: 3
+  view: 5
 
   # For Showcase view, flip alternate rows?
   flip_alt_rows: false
