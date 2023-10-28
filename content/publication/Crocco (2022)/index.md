@@ -1,24 +1,22 @@
 ---
-title: 'A Blood-Based Molecular Clock for Biological Age Estimation'
+title: 'The Genetic Variability of Members of the SLC38 Family of Amino Acid Transporters ( SLC38A3, SLC38A7 and SLC38A9) Affects Susceptibility to Type 2 Diabetes and Vascular Complications'
 
 # for `authors`, if you use `admin` instead of your publicaiton name,
 # the page will include a thumbnail of your pic and basic info,
 # kinda like a mini home page
 authors:
-- Paparazzo E
-- Geracitano S
-- Lagani V
-- Bartolomeo D
-- Aceto MA
-- DA P
-- Citrigno L
-- Bellizzi D
-- Passarino G
+- Crocco P
+- Dato S
 - Montesanto A
+- Bonfigli AR
+- Testa R
+- Olivieri F
+- Passarino G
+- Rose G
 
 
-date: '2022-12-21'
-doi: https://doi.org/10.3390/cells12010032
+date: '2022-10-22'
+doi: https://doi.org/10.3390/nu14214440
 featured: false
 # To use the `image` argument, add an image named `featured.jpg/png` to your page's folder.
 # focal_point: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
@@ -28,18 +26,22 @@ image:
   preview_only: true
 # `projects` can associate this post with one or more of your projects
 projects: []
-publication: '*Cells*'
+publication: '*Nutrients*'
 publication_types:
 - 2
-publishDate: '2022-12-21'
+publishDate: '2022-10-22'
 slides: ''
 summary: ''
 # `tags` are like keywords
 tags:
-- ELOVL2
-- age prediction
-- epigenetics
-- sjTRECs
+- SLC38 family
+- Type 2 Diabetes
+- amino acid availability
+- amino acid sensing
+- amino acid transporters
+- diabetes complications
+- genetic variability
+- mTORC1 pathway
 
 url_code: ""
 url_dataset: ""
@@ -50,6 +52,6 @@ url_slides: ""
 url_source: ""
 url_video: ""
 
-abstract: 'In the last decade, extensive efforts have been made to identify biomarkers of biological age. DNA methylation levels of ELOVL fatty acid elongase 2 (ELOVL2) and the signal joint T-cell receptor rearrangement excision circles (sjTRECs) represent the most promising candidates. Although these two non-redundant biomarkers echo important biological aspects of the ageing process in humans, a well-validated molecular clock exploiting these powerful candidates has not yet been formulated. The present study aimed to develop a more accurate molecular clock in a sample of 194 Italian individuals by re-analyzing the previously obtained EVOLV2 methylation data together with the amount of sjTRECs in the same blood samples. The proposed model showed a high prediction accuracy both in younger individuals with an error of about 2.5 years and in older subjects where a relatively low error was observed if compared with those reported in previously published studies. In conclusion, an easy, cost-effective and reliable model to measure the individual rate and the quality of aging in human population has been proposed. Further studies are required to validate the model and to extend its use in an applicative context.'
+abstract: 'Type 2 Diabetes (T2D) is a metabolic disease associated with long-term complications, with a multifactorial pathogenesis related to the interplay between genetic and modifiable risk factors, of which nutrition is the most relevant. In particular, the importance of proteins and constitutive amino acids (AAs) in disease susceptibility is emerging. The ability to sense and respond to changes in AA supplies is mediated by complex networks, of which AA transporters (AATs) are crucial components acting also as sensors of AA availability. This study explored the associations between polymorphisms in selected AATs genes and T2D and vascular complications in 433 patients and 506 healthy controls. Analyses revealed significant association of SLC38A3-rs1858828 with disease risk. Stratification of patients based on presence/absence of vascular complications highlighted significant associations of SLC7A8-rs3783436 and SLC38A7-rs9806843 with diabetic retinopathy. Additionally, the SLC38A9-rs4865615 resulted associated with chronic kidney disease. Notably, these genes function as AAs sensors, specifically glutamine, leucine, and arginine, linked to the main nutrient signaling pathway mammalian target of rapamycin complex 1 (mTORC1). Thus, their genetic variability may contribute to T2D by influencing the ability to properly transduce a signal activating mTORC1 in response to AA availability. In this scenario, the contribution of dietary AAs supply to disease risk may be relevant.'
 ---
 
