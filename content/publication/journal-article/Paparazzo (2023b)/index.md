@@ -1,18 +1,17 @@
 ---
-title: 'Thymic function and survival at advance ages in nursing home residents from Southern Italy'
+title: 'Thymic function and survival at advanced ages in nursing home residents from Southern Italy'
 
 # for `authors`, if you use `admin` instead of your publicaiton name,
 # the page will include a thumbnail of your pic and basic info,
 # kinda like a mini home page
 authors:
+- Bruno F
 - Paparazzo E
 - Geracitano S
 - Lagani V
 - Citrigno L
 - Bartolomeo D
 - Aceto MA
-- Bruno F
-- Maletta R
 - Passarino G
 - Montesanto A
 
