@@ -11,4 +11,4 @@ title: Non saper fare un "o" col bicchiere
 
 Non essere in grado di disegnare un cerchio nemmeno mettendo un bicchiere tondo su un foglio e tracciando la linea ai suoi margini. 
 
-**Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.**
+
