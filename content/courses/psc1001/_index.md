@@ -1,7 +1,7 @@
 ---
 date: "2021-01-08"
 lastmod: "2021-01-09"
-title: "APAPPLIED HUMAN GENETICS"
+title: "APPLIED HUMAN GENETICS"
 linktitle: Overview
 summary: The course will deal with the application of genetics to the understanding the effect of genetic variability and its consequences  
 toc: false
