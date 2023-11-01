@@ -14,11 +14,7 @@ type: book
 weight: 20
 ---
 
-## Course Description
 
-A brief history of the development of forensic genetics. Human genetic variation. DNA extraction and quantification. DNA polymorphisms for forensic analysis. Mitochondrial DNA and Y chromosome markers for forensic applications. Statistical analysis of DNA profiling results: individual identification and parentage analyses. Future technologies and challenges. Ethical, legal and social implications.
-
-## Learning Objectives
 
 <iframe src="https://fdpapplications.shinyapps.io/eGFR/" width=1000 height=800"></iframe>
 
