@@ -4,9 +4,9 @@ lastmod: "2021-01-09"
 title: "Calculate and visualize your citations over time"
 linktitle: Overview
 image:
-  caption: "Oil can"
+  caption: "H-index"
   focal_point: "Center"
-  alt_text: This is a picture of oil can.
+  alt_text: This is my H-index.
 ---
 
 
