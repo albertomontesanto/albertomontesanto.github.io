@@ -9,6 +9,6 @@ image:
   alt_text: This is my H-index.
 ---
 
-## App Description
+## Basic information
 
 The H-index is an author-level metric that measures both the productivity and citation impact of the publications, initially used for an individual scientist or scholar. 

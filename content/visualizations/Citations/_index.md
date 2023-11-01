@@ -4,13 +4,13 @@ lastmod: "2021-01-09"
 title: "Calculate and visualize your citations over time"
 linktitle: Overview
 image:
-  caption: "H-index"
+  caption: "Citations"
   focal_point: "Center"
-  alt_text: This is my H-index.
+  alt_text: These are my total citations.
 ---
 
 
 
 ## Basic information
+Citation data are widely used in the context of research evaluation and performance assessments. 
 
-The h-index is an author-level metric that measures both the productivity and citation impact of the publications, initially used for an individual scientist or scholar. 
