@@ -5,16 +5,19 @@ title: "Calculate and visualize your H-index over time"
 linktitle: Overview
 toc: false
 draft: false
+
+image:
+  caption: "H-index"
+  focal_point: "Center"
+  alt_text: This is my H-index
+
 menu:
   HIndex:
     name: Overview
     weight: 10
 type: book
 weight: 10
-image:
-  caption: "H-index"
-  focal_point: "Center"
-  alt_text: This is my H-index.
+
 ---
 
 ## Basic information
