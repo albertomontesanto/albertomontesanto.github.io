@@ -3,7 +3,9 @@ date: "2021-01-08"
 lastmod: "2021-01-09"
 title: "Estimated Glomerular Filtartion Rate"
 linktitle: Overview
-summary: A survey course in forensic genetics. Explores important topics in the field through current use of DNA polymorphisms for forensic analysis. 
+summary: Chronic kidney disease (CKD) is an important epidemic and public health problem, resulting in end-stage renal disease (ESRD) and increased risk of morbidity and mortality.
+CKD is currently classified into five stages based on glomerular filtration rate (GFR) as recommended by many professional.
+guidelines. Measurement of renal function is important in the diagnosis and management of renal diseases. GFR is the standard measure of renal function.
 toc: false
 draft: false
 menu:
