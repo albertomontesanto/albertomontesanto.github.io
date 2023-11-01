@@ -1,7 +1,7 @@
 ---
 date: "2021-01-08"
 lastmod: "2021-01-09"
-title: "Calculate and visualize yout H-index over time"
+title: "Calculate and visualize your H-index over time"
 linktitle: Overview
 image:
   caption: "H-index"
@@ -11,5 +11,4 @@ image:
 
 ## App Description
 
-
-kkk
+The H-index is an author-level metric that measures both the productivity and citation impact of the publications, initially used for an individual scientist or scholar. 
