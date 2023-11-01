@@ -34,11 +34,11 @@ content:
   - name: AGE-IT
     tag: 
   - name: Dietà della longevità
-    tag: COVID-19
+    tag: Dietà 
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
-  columns: '3'
+  columns: '5'
 
   # Toggle between the various page layout types.
   #   1 = List

@@ -1,0 +1,512 @@
+lm_eqn <- function(df){
+m <- lm(y ~ x, df);
+eq <- substitute(italic(y) == a + b %.% italic(x)*","~~italic(r)^2~"="~r2,
+list(a = format(unname(coef(m)[1]), digits = 2),
+b = format(unname(coef(m)[2]), digits = 2),
+r2 = format(summary(m)$r.squared, digits = 3)))
+as.character(as.expression(eq));
+}
+#Median Absolute Error
+mdrae_summary <- function(data, lev=NULL, model=NULL) {
+c(MdAE=median(abs(data$pred - data$obs)))
+}
+#loading data
+# Wide format
+myDataset<-read_xlsx("WellResult4.xlsx")
+#eliminare PC0121 TBP a 26.9
+#eliminare CSU0380 sjTREC a 37.08
+#eliminare 723700728 valore strano TBP
+#eliminare 723700739 valore strano TBP
+#eliminare 723701806 valore strano TBP
+names(myDataset)
+myBadSample<-c("88","CSU0380","SD10","R081")
+myFinalDataset<-myDataset %>%  group_by(Sample,Target) %>%  summarise(meanCq=mean(Cq,na.rm=TRUE))
+mySJTREC<-myFinalDataset %>% filter(Target == "SJ-TREC")
+myTBP<-myFinalDataset %>% filter(Target == "TBP")
+myDataset1<-merge(myTBP,mySJTREC,by="Sample",all.x = TRUE)
+myDataset2<-myDataset1  %>% select(Sample,meanCq.x,meanCq.y) #%>% filter(!Sample %in% myBadSample)
+names(myDataset2)<-c("ID","TBP","sjTREC")
+myDataset2$DeltaCq<-myDataset2$TBP-myDataset2$sjTREC
+myDataset2$DeltaCq_2<-myDataset2$DeltaCq^2
+write.csv(myDataset2,file="myDataset2.csv",na="", row.names = FALSE)
+#myDataset2<-read.csv("myDataset2_input.csv",T)
+myPheno<-read_xlsx("Ages.xlsx")
+names(myPheno)[1]<-"ID"
+myDataset3<-merge(myDataset2,myPheno,by="ID",all.y = TRUE)
+myDataset3<-myDataset3  %>% filter(!is.na(DeltaCq))
+write.csv(myDataset3,file="myDataset3.csv",na="", row.names = FALSE)
+model_DeltaCq <- train(
+Age ~  DeltaCq, data = myDataset3, method = "lm",
+trControl = trainControl("LOOCV", summaryFunction = mdrae_summary,savePredictions = "all"),
+preProcess = c("center", "scale"),
+metric = "MdAE",
+tuneLength = 10
+)
+print(model_DeltaCq)
+model_DeltaCq2 <- train(
+Age ~  DeltaCq, data = myDataset3, method = "lm",
+trControl = trainControl("LOOCV",savePredictions = "all"),
+preProcess = c("center", "scale"),
+metric = "MdAE",
+tuneLength = 10
+)
+print(model_DeltaCq2)
+m1<-lm(Age ~  DeltaCq, data=myDataset3)
+summary(m1)
+myDataset3$predictionsDeltaCq <-model_DeltaCq$pred[,1]
+myDataset3$MAE_model_DeltaCq<-abs(myDataset3$Age-myDataset3$predictionsDeltaCq)
+myDataset3$AgeClasses<-cut(myDataset3$Age,breaks=c(20,30,40,50,60,70,80,90,100), right=FALSE)
+write.csv(myDataset3,file="myDataset3.csv",na="", row.names = FALSE)
+pn_DeltaCq<-ggplot(myDataset3,aes(DeltaCq, Age)) + geom_point() +
+geom_smooth(method='lm', formula= y~x) +xlab("DeltaCq (Cq-TBP - Cq-sjTREC)") + ylab("Età") + geom_text(x = -15, y = 30, label = "MAD=8.4; R-square=57.3%", parse = FALSE) +  theme_bw()
+pn_DeltaCq + theme_bw() #+labs(color='Classi di etò')
+pn_DeltaCq  +  geom_label_repel(data= myDataset3 %>% filter(ID %in% myBadSample), aes(label = ID), box.padding = 0.35,  angle = 45, point.padding = 0.5, segment.color = 'grey50')
+myDataset5<-myDataset3 %>%  group_by(AgeClasses) %>%  summarise(medianErr_DeltaCq=median(MAE_model_DeltaCq,na.rm=TRUE), N_DeltaCq=length(MAE_model_DeltaCq))
+pn_DeltaCq2<-ggplot(myDataset5,aes(AgeClasses, medianErr_DeltaCq))+ geom_point(aes(col=AgeClasses, size=N_DeltaCq)) +
+geom_smooth(method='lm', formula= y~x) +xlab('Classi di età') + ylab('Median Absolute Error (MAD)')
+pn_DeltaCq2 + theme_bw() +labs(color='Classi di età')
+write.csv(myDataset5,file="ageClasses_sjTREC",na="", row.names = FALSE)
+#by gender
+pn_DeltaCq3<-ggplot(myDataset3,aes(x=DeltaCq, y=Age,group=Sex)) + geom_point() +
+geom_smooth(method='lm', formula= y~x, aes(color=factor(Sex))) +xlab("DeltaCq (Cq-TBP - Cq-sjTREC)") + ylab("Età") +  theme_bw()
+pn_DeltaCq3 + theme_bw() + labs(color='Sesso')
+rm(list=ls())
+library(reshape2)
+library(dplyr)
+library(tidyr)
+library(readxl)
+library(ggplot2)
+library(ggpubr)
+library(ggrepel)
+library(sjPlot)
+library(sjmisc)
+library(sjlabelled)
+library(caret)
+lm_eqn <- function(df){
+m <- lm(y ~ x, df);
+eq <- substitute(italic(y) == a + b %.% italic(x)*","~~italic(r)^2~"="~r2,
+list(a = format(unname(coef(m)[1]), digits = 2),
+b = format(unname(coef(m)[2]), digits = 2),
+r2 = format(summary(m)$r.squared, digits = 3)))
+as.character(as.expression(eq));
+}
+#Median Absolute Error
+mdrae_summary <- function(data, lev=NULL, model=NULL) {
+c(MdAE=median(abs(data$pred - data$obs)))
+}
+#loading data
+# Wide format
+myDataset<-read_xlsx("WellResult4.xlsx")
+#eliminare PC0121 TBP a 26.9
+#eliminare CSU0380 sjTREC a 37.08
+#eliminare 723700728 valore strano TBP
+#eliminare 723700739 valore strano TBP
+#eliminare 723701806 valore strano TBP
+names(myDataset)
+myBadSample<-c("88","CSU0380","SD10","R081","SD56","SD80","723700807")
+myFinalDataset<-myDataset %>%  group_by(Sample,Target) %>%  summarise(meanCq=mean(Cq,na.rm=TRUE))
+mySJTREC<-myFinalDataset %>% filter(Target == "SJ-TREC")
+myTBP<-myFinalDataset %>% filter(Target == "TBP")
+myDataset1<-merge(myTBP,mySJTREC,by="Sample",all.x = TRUE)
+myDataset2<-myDataset1  %>% select(Sample,meanCq.x,meanCq.y) #%>% filter(!Sample %in% myBadSample)
+names(myDataset2)<-c("ID","TBP","sjTREC")
+myDataset2$DeltaCq<-myDataset2$TBP-myDataset2$sjTREC
+myDataset2$DeltaCq_2<-myDataset2$DeltaCq^2
+write.csv(myDataset2,file="myDataset2.csv",na="", row.names = FALSE)
+#myDataset2<-read.csv("myDataset2_input.csv",T)
+myPheno<-read_xlsx("Ages.xlsx")
+names(myPheno)[1]<-"ID"
+myDataset3<-merge(myDataset2,myPheno,by="ID",all.y = TRUE)
+myDataset3<-myDataset3  %>% filter(!is.na(DeltaCq))
+write.csv(myDataset3,file="myDataset3.csv",na="", row.names = FALSE)
+model_DeltaCq <- train(
+Age ~  DeltaCq, data = myDataset3, method = "lm",
+trControl = trainControl("LOOCV", summaryFunction = mdrae_summary,savePredictions = "all"),
+preProcess = c("center", "scale"),
+metric = "MdAE",
+tuneLength = 10
+)
+print(model_DeltaCq)
+model_DeltaCq2 <- train(
+Age ~  DeltaCq, data = myDataset3, method = "lm",
+trControl = trainControl("LOOCV",savePredictions = "all"),
+preProcess = c("center", "scale"),
+metric = "MdAE",
+tuneLength = 10
+)
+print(model_DeltaCq2)
+m1<-lm(Age ~  DeltaCq, data=myDataset3)
+summary(m1)
+myDataset3$predictionsDeltaCq <-model_DeltaCq$pred[,1]
+myDataset3$MAE_model_DeltaCq<-abs(myDataset3$Age-myDataset3$predictionsDeltaCq)
+myDataset3$AgeClasses<-cut(myDataset3$Age,breaks=c(20,30,40,50,60,70,80,90,100), right=FALSE)
+write.csv(myDataset3,file="myDataset3.csv",na="", row.names = FALSE)
+pn_DeltaCq<-ggplot(myDataset3,aes(DeltaCq, Age)) + geom_point() +
+geom_smooth(method='lm', formula= y~x) +xlab("DeltaCq (Cq-TBP - Cq-sjTREC)") + ylab("Età") + geom_text(x = -15, y = 30, label = "MAD=8.4; R-square=57.3%", parse = FALSE) +  theme_bw()
+pn_DeltaCq + theme_bw() #+labs(color='Classi di etò')
+pn_DeltaCq  +  geom_label_repel(data= myDataset3 %>% filter(ID %in% myBadSample), aes(label = ID), box.padding = 0.35,  angle = 45, point.padding = 0.5, segment.color = 'grey50')
+myDataset5<-myDataset3 %>%  group_by(AgeClasses) %>%  summarise(medianErr_DeltaCq=median(MAE_model_DeltaCq,na.rm=TRUE), N_DeltaCq=length(MAE_model_DeltaCq))
+pn_DeltaCq2<-ggplot(myDataset5,aes(AgeClasses, medianErr_DeltaCq))+ geom_point(aes(col=AgeClasses, size=N_DeltaCq)) +
+geom_smooth(method='lm', formula= y~x) +xlab('Classi di età') + ylab('Median Absolute Error (MAD)')
+pn_DeltaCq2 + theme_bw() +labs(color='Classi di età')
+write.csv(myDataset5,file="ageClasses_sjTREC",na="", row.names = FALSE)
+#by gender
+pn_DeltaCq3<-ggplot(myDataset3,aes(x=DeltaCq, y=Age,group=Sex)) + geom_point() +
+geom_smooth(method='lm', formula= y~x, aes(color=factor(Sex))) +xlab("DeltaCq (Cq-TBP - Cq-sjTREC)") + ylab("Età") +  theme_bw()
+pn_DeltaCq3 + theme_bw() + labs(color='Sesso')
+rm(list=ls())
+library(reshape2)
+library(dplyr)
+library(tidyr)
+library(readxl)
+library(ggplot2)
+library(ggpubr)
+library(ggrepel)
+library(sjPlot)
+library(sjmisc)
+library(sjlabelled)
+library(caret)
+lm_eqn <- function(df){
+m <- lm(y ~ x, df);
+eq <- substitute(italic(y) == a + b %.% italic(x)*","~~italic(r)^2~"="~r2,
+list(a = format(unname(coef(m)[1]), digits = 2),
+b = format(unname(coef(m)[2]), digits = 2),
+r2 = format(summary(m)$r.squared, digits = 3)))
+as.character(as.expression(eq));
+}
+#Median Absolute Error
+mdrae_summary <- function(data, lev=NULL, model=NULL) {
+c(MdAE=median(abs(data$pred - data$obs)))
+}
+#loading data
+# Wide format
+myDataset<-read_xlsx("WellResult4.xlsx")
+#eliminare PC0121 TBP a 26.9
+#eliminare CSU0380 sjTREC a 37.08
+#eliminare 723700728 valore strano TBP
+#eliminare 723700739 valore strano TBP
+#eliminare 723701806 valore strano TBP
+names(myDataset)
+myBadSample<-c("88","CSU0380","SD10","R081","SD56","SD80","723700807","548","555","604","224","R077")
+myFinalDataset<-myDataset %>%  group_by(Sample,Target) %>%  summarise(meanCq=mean(Cq,na.rm=TRUE))
+mySJTREC<-myFinalDataset %>% filter(Target == "SJ-TREC")
+myTBP<-myFinalDataset %>% filter(Target == "TBP")
+myDataset1<-merge(myTBP,mySJTREC,by="Sample",all.x = TRUE)
+myDataset2<-myDataset1  %>% select(Sample,meanCq.x,meanCq.y) #%>% filter(!Sample %in% myBadSample)
+names(myDataset2)<-c("ID","TBP","sjTREC")
+myDataset2$DeltaCq<-myDataset2$TBP-myDataset2$sjTREC
+myDataset2$DeltaCq_2<-myDataset2$DeltaCq^2
+write.csv(myDataset2,file="myDataset2.csv",na="", row.names = FALSE)
+#myDataset2<-read.csv("myDataset2_input.csv",T)
+myPheno<-read_xlsx("Ages.xlsx")
+names(myPheno)[1]<-"ID"
+myDataset3<-merge(myDataset2,myPheno,by="ID",all.y = TRUE)
+myDataset3<-myDataset3  %>% filter(!is.na(DeltaCq))
+write.csv(myDataset3,file="myDataset3.csv",na="", row.names = FALSE)
+model_DeltaCq <- train(
+Age ~  DeltaCq, data = myDataset3, method = "lm",
+trControl = trainControl("LOOCV", summaryFunction = mdrae_summary,savePredictions = "all"),
+preProcess = c("center", "scale"),
+metric = "MdAE",
+tuneLength = 10
+)
+print(model_DeltaCq)
+model_DeltaCq2 <- train(
+Age ~  DeltaCq, data = myDataset3, method = "lm",
+trControl = trainControl("LOOCV",savePredictions = "all"),
+preProcess = c("center", "scale"),
+metric = "MdAE",
+tuneLength = 10
+)
+print(model_DeltaCq2)
+m1<-lm(Age ~  DeltaCq, data=myDataset3)
+summary(m1)
+myDataset3$predictionsDeltaCq <-model_DeltaCq$pred[,1]
+myDataset3$MAE_model_DeltaCq<-abs(myDataset3$Age-myDataset3$predictionsDeltaCq)
+myDataset3$AgeClasses<-cut(myDataset3$Age,breaks=c(20,30,40,50,60,70,80,90,100), right=FALSE)
+write.csv(myDataset3,file="myDataset3.csv",na="", row.names = FALSE)
+pn_DeltaCq<-ggplot(myDataset3,aes(DeltaCq, Age)) + geom_point() +
+geom_smooth(method='lm', formula= y~x) +xlab("DeltaCq (Cq-TBP - Cq-sjTREC)") + ylab("Età") + geom_text(x = -15, y = 30, label = "MAD=8.4; R-square=57.3%", parse = FALSE) +  theme_bw()
+pn_DeltaCq + theme_bw() #+labs(color='Classi di etò')
+pn_DeltaCq  +  geom_label_repel(data= myDataset3 %>% filter(ID %in% myBadSample), aes(label = ID), box.padding = 0.35,  angle = 45, point.padding = 0.5, segment.color = 'grey50')
+myDataset5<-myDataset3 %>%  group_by(AgeClasses) %>%  summarise(medianErr_DeltaCq=median(MAE_model_DeltaCq,na.rm=TRUE), N_DeltaCq=length(MAE_model_DeltaCq))
+pn_DeltaCq2<-ggplot(myDataset5,aes(AgeClasses, medianErr_DeltaCq))+ geom_point(aes(col=AgeClasses, size=N_DeltaCq)) +
+geom_smooth(method='lm', formula= y~x) +xlab('Classi di età') + ylab('Median Absolute Error (MAD)')
+pn_DeltaCq2 + theme_bw() +labs(color='Classi di età')
+write.csv(myDataset5,file="ageClasses_sjTREC",na="", row.names = FALSE)
+#by gender
+pn_DeltaCq3<-ggplot(myDataset3,aes(x=DeltaCq, y=Age,group=Sex)) + geom_point() +
+geom_smooth(method='lm', formula= y~x, aes(color=factor(Sex))) +xlab("DeltaCq (Cq-TBP - Cq-sjTREC)") + ylab("Età") +  theme_bw()
+pn_DeltaCq3 + theme_bw() + labs(color='Sesso')
+rm(list=ls())
+library(reshape2)
+library(dplyr)
+library(tidyr)
+library(readxl)
+library(ggplot2)
+library(ggpubr)
+library(ggrepel)
+library(sjPlot)
+library(sjmisc)
+library(sjlabelled)
+library(caret)
+lm_eqn <- function(df){
+m <- lm(y ~ x, df);
+eq <- substitute(italic(y) == a + b %.% italic(x)*","~~italic(r)^2~"="~r2,
+list(a = format(unname(coef(m)[1]), digits = 2),
+b = format(unname(coef(m)[2]), digits = 2),
+r2 = format(summary(m)$r.squared, digits = 3)))
+as.character(as.expression(eq));
+}
+#Median Absolute Error
+mdrae_summary <- function(data, lev=NULL, model=NULL) {
+c(MdAE=median(abs(data$pred - data$obs)))
+}
+#loading data
+# Wide format
+myDataset<-read_xlsx("WellResult4.xlsx")
+#eliminare PC0121 TBP a 26.9
+#eliminare CSU0380 sjTREC a 37.08
+#eliminare 723700728 valore strano TBP
+#eliminare 723700739 valore strano TBP
+#eliminare 723701806 valore strano TBP
+names(myDataset)
+myBadSample<-c("88","SD89","CSU0380","SD10")
+myFinalDataset<-myDataset %>%  group_by(Sample,Target) %>%  summarise(meanCq=mean(Cq,na.rm=TRUE))
+mySJTREC<-myFinalDataset %>% filter(Target == "SJ-TREC")
+myTBP<-myFinalDataset %>% filter(Target == "TBP")
+myDataset1<-merge(myTBP,mySJTREC,by="Sample",all.x = TRUE)
+myDataset2<-myDataset1  %>% select(Sample,meanCq.x,meanCq.y) #%>% filter(!Sample %in% myBadSample)
+names(myDataset2)<-c("ID","TBP","sjTREC")
+myDataset2$DeltaCq<-myDataset2$TBP-myDataset2$sjTREC
+myDataset2$DeltaCq_2<-myDataset2$DeltaCq^2
+write.csv(myDataset2,file="myDataset2.csv",na="", row.names = FALSE)
+#myDataset2<-read.csv("myDataset2_input.csv",T)
+myPheno<-read_xlsx("Ages.xlsx")
+names(myPheno)[1]<-"ID"
+myDataset3<-merge(myDataset2,myPheno,by="ID",all.y = TRUE)
+myDataset3<-myDataset3  %>% filter(!is.na(DeltaCq))
+write.csv(myDataset3,file="myDataset3.csv",na="", row.names = FALSE)
+model_DeltaCq <- train(
+Age ~  DeltaCq, data = myDataset3, method = "lm",
+trControl = trainControl("LOOCV", summaryFunction = mdrae_summary,savePredictions = "all"),
+preProcess = c("center", "scale"),
+metric = "MdAE",
+tuneLength = 10
+)
+print(model_DeltaCq)
+model_DeltaCq2 <- train(
+Age ~  DeltaCq, data = myDataset3, method = "lm",
+trControl = trainControl("LOOCV",savePredictions = "all"),
+preProcess = c("center", "scale"),
+metric = "MdAE",
+tuneLength = 10
+)
+print(model_DeltaCq2)
+m1<-lm(Age ~  DeltaCq, data=myDataset3)
+summary(m1)
+myDataset3$predictionsDeltaCq <-model_DeltaCq$pred[,1]
+myDataset3$MAE_model_DeltaCq<-abs(myDataset3$Age-myDataset3$predictionsDeltaCq)
+myDataset3$AgeClasses<-cut(myDataset3$Age,breaks=c(20,30,40,50,60,70,80,90,100), right=FALSE)
+write.csv(myDataset3,file="myDataset3.csv",na="", row.names = FALSE)
+pn_DeltaCq<-ggplot(myDataset3,aes(DeltaCq, Age)) + geom_point() +
+geom_smooth(method='lm', formula= y~x) +xlab("DeltaCq (Cq-TBP - Cq-sjTREC)") + ylab("Età") + geom_text(x = -15, y = 30, label = "MAD=8.4; R-square=57.3%", parse = FALSE) +  theme_bw()
+pn_DeltaCq + theme_bw() #+labs(color='Classi di etò')
+pn_DeltaCq  +  geom_label_repel(data= myDataset3 %>% filter(ID %in% myBadSample), aes(label = ID), box.padding = 0.35,  angle = 45, point.padding = 0.5, segment.color = 'grey50')
+myDataset5<-myDataset3 %>%  group_by(AgeClasses) %>%  summarise(medianErr_DeltaCq=median(MAE_model_DeltaCq,na.rm=TRUE), N_DeltaCq=length(MAE_model_DeltaCq))
+pn_DeltaCq2<-ggplot(myDataset5,aes(AgeClasses, medianErr_DeltaCq))+ geom_point(aes(col=AgeClasses, size=N_DeltaCq)) +
+geom_smooth(method='lm', formula= y~x) +xlab('Classi di età') + ylab('Median Absolute Error (MAD)')
+pn_DeltaCq2 + theme_bw() +labs(color='Classi di età')
+write.csv(myDataset5,file="ageClasses_sjTREC",na="", row.names = FALSE)
+#by gender
+pn_DeltaCq3<-ggplot(myDataset3,aes(x=DeltaCq, y=Age,group=Sex)) + geom_point() +
+geom_smooth(method='lm', formula= y~x, aes(color=factor(Sex))) +xlab("DeltaCq (Cq-TBP - Cq-sjTREC)") + ylab("Età") +  theme_bw()
+pn_DeltaCq3 + theme_bw() + labs(color='Sesso')
+rm(list=ls())
+library(reshape2)
+library(dplyr)
+library(tidyr)
+library(readxl)
+library(ggplot2)
+library(ggpubr)
+library(ggrepel)
+library(sjPlot)
+library(sjmisc)
+library(sjlabelled)
+library(caret)
+lm_eqn <- function(df){
+m <- lm(y ~ x, df);
+eq <- substitute(italic(y) == a + b %.% italic(x)*","~~italic(r)^2~"="~r2,
+list(a = format(unname(coef(m)[1]), digits = 2),
+b = format(unname(coef(m)[2]), digits = 2),
+r2 = format(summary(m)$r.squared, digits = 3)))
+as.character(as.expression(eq));
+}
+#Median Absolute Error
+mdrae_summary <- function(data, lev=NULL, model=NULL) {
+c(MdAE=median(abs(data$pred - data$obs)))
+}
+#loading data
+# Wide format
+myDataset<-read_xlsx("WellResult4.xlsx")
+#eliminare PC0121 TBP a 26.9
+#eliminare CSU0380 sjTREC a 37.08
+#eliminare 723700728 valore strano TBP
+#eliminare 723700739 valore strano TBP
+#eliminare 723701806 valore strano TBP
+names(myDataset)
+myBadSample<-c("88","SD89","CSU0380")
+myFinalDataset<-myDataset %>%  group_by(Sample,Target) %>%  summarise(meanCq=mean(Cq,na.rm=TRUE))
+mySJTREC<-myFinalDataset %>% filter(Target == "SJ-TREC")
+myTBP<-myFinalDataset %>% filter(Target == "TBP")
+myDataset1<-merge(myTBP,mySJTREC,by="Sample",all.x = TRUE)
+myDataset2<-myDataset1  %>% select(Sample,meanCq.x,meanCq.y) #%>% filter(!Sample %in% myBadSample)
+names(myDataset2)<-c("ID","TBP","sjTREC")
+myDataset2$DeltaCq<-myDataset2$TBP-myDataset2$sjTREC
+myDataset2$DeltaCq_2<-myDataset2$DeltaCq^2
+write.csv(myDataset2,file="myDataset2.csv",na="", row.names = FALSE)
+#myDataset2<-read.csv("myDataset2_input.csv",T)
+myPheno<-read_xlsx("Ages.xlsx")
+names(myPheno)[1]<-"ID"
+myDataset3<-merge(myDataset2,myPheno,by="ID",all.y = TRUE)
+myDataset3<-myDataset3  %>% filter(!is.na(DeltaCq))
+write.csv(myDataset3,file="myDataset3.csv",na="", row.names = FALSE)
+model_DeltaCq <- train(
+Age ~  DeltaCq, data = myDataset3, method = "lm",
+trControl = trainControl("LOOCV", summaryFunction = mdrae_summary,savePredictions = "all"),
+preProcess = c("center", "scale"),
+metric = "MdAE",
+tuneLength = 10
+)
+print(model_DeltaCq)
+model_DeltaCq2 <- train(
+Age ~  DeltaCq, data = myDataset3, method = "lm",
+trControl = trainControl("LOOCV",savePredictions = "all"),
+preProcess = c("center", "scale"),
+metric = "MdAE",
+tuneLength = 10
+)
+print(model_DeltaCq2)
+m1<-lm(Age ~  DeltaCq, data=myDataset3)
+summary(m1)
+myDataset3$predictionsDeltaCq <-model_DeltaCq$pred[,1]
+myDataset3$MAE_model_DeltaCq<-abs(myDataset3$Age-myDataset3$predictionsDeltaCq)
+myDataset3$AgeClasses<-cut(myDataset3$Age,breaks=c(20,30,40,50,60,70,80,90,100), right=FALSE)
+write.csv(myDataset3,file="myDataset3.csv",na="", row.names = FALSE)
+pn_DeltaCq<-ggplot(myDataset3,aes(DeltaCq, Age)) + geom_point() +
+geom_smooth(method='lm', formula= y~x) +xlab("DeltaCq (Cq-TBP - Cq-sjTREC)") + ylab("Età") + geom_text(x = -15, y = 30, label = "MAD=8.4; R-square=57.3%", parse = FALSE) +  theme_bw()
+pn_DeltaCq + theme_bw() #+labs(color='Classi di etò')
+pn_DeltaCq  +  geom_label_repel(data= myDataset3 %>% filter(ID %in% myBadSample), aes(label = ID), box.padding = 0.35,  angle = 45, point.padding = 0.5, segment.color = 'grey50')
+myDataset5<-myDataset3 %>%  group_by(AgeClasses) %>%  summarise(medianErr_DeltaCq=median(MAE_model_DeltaCq,na.rm=TRUE), N_DeltaCq=length(MAE_model_DeltaCq))
+pn_DeltaCq2<-ggplot(myDataset5,aes(AgeClasses, medianErr_DeltaCq))+ geom_point(aes(col=AgeClasses, size=N_DeltaCq)) +
+geom_smooth(method='lm', formula= y~x) +xlab('Classi di età') + ylab('Median Absolute Error (MAD)')
+pn_DeltaCq2 + theme_bw() +labs(color='Classi di età')
+write.csv(myDataset5,file="ageClasses_sjTREC",na="", row.names = FALSE)
+#by gender
+pn_DeltaCq3<-ggplot(myDataset3,aes(x=DeltaCq, y=Age,group=Sex)) + geom_point() +
+geom_smooth(method='lm', formula= y~x, aes(color=factor(Sex))) +xlab("DeltaCq (Cq-TBP - Cq-sjTREC)") + ylab("Età") +  theme_bw()
+pn_DeltaCq3 + theme_bw() + labs(color='Sesso')
+rm(list=ls())
+library(reshape2)
+library(dplyr)
+library(tidyr)
+library(readxl)
+library(ggplot2)
+library(ggpubr)
+library(ggrepel)
+library(sjPlot)
+library(sjmisc)
+library(sjlabelled)
+library(caret)
+lm_eqn <- function(df){
+m <- lm(y ~ x, df);
+eq <- substitute(italic(y) == a + b %.% italic(x)*","~~italic(r)^2~"="~r2,
+list(a = format(unname(coef(m)[1]), digits = 2),
+b = format(unname(coef(m)[2]), digits = 2),
+r2 = format(summary(m)$r.squared, digits = 3)))
+as.character(as.expression(eq));
+}
+#Median Absolute Error
+mdrae_summary <- function(data, lev=NULL, model=NULL) {
+c(MdAE=median(abs(data$pred - data$obs)))
+}
+#loading data
+# Wide format
+myDataset<-read_xlsx("WellResult4.xlsx")
+#eliminare PC0121 TBP a 26.9
+#eliminare CSU0380 sjTREC a 37.08
+#eliminare 723700728 valore strano TBP
+#eliminare 723700739 valore strano TBP
+#eliminare 723701806 valore strano TBP
+names(myDataset)
+myBadSample<-c("88","CSU0380")
+myFinalDataset<-myDataset %>%  group_by(Sample,Target) %>%  summarise(meanCq=mean(Cq,na.rm=TRUE))
+mySJTREC<-myFinalDataset %>% filter(Target == "SJ-TREC")
+myTBP<-myFinalDataset %>% filter(Target == "TBP")
+myDataset1<-merge(myTBP,mySJTREC,by="Sample",all.x = TRUE)
+myDataset2<-myDataset1  %>% select(Sample,meanCq.x,meanCq.y) #%>% filter(!Sample %in% myBadSample)
+names(myDataset2)<-c("ID","TBP","sjTREC")
+myDataset2$DeltaCq<-myDataset2$TBP-myDataset2$sjTREC
+myDataset2$DeltaCq_2<-myDataset2$DeltaCq^2
+write.csv(myDataset2,file="myDataset2.csv",na="", row.names = FALSE)
+#myDataset2<-read.csv("myDataset2_input.csv",T)
+myPheno<-read_xlsx("Ages.xlsx")
+names(myPheno)[1]<-"ID"
+myDataset3<-merge(myDataset2,myPheno,by="ID",all.y = TRUE)
+myDataset3<-myDataset3  %>% filter(!is.na(DeltaCq))
+write.csv(myDataset3,file="myDataset3.csv",na="", row.names = FALSE)
+model_DeltaCq <- train(
+Age ~  DeltaCq, data = myDataset3, method = "lm",
+trControl = trainControl("LOOCV", summaryFunction = mdrae_summary,savePredictions = "all"),
+preProcess = c("center", "scale"),
+metric = "MdAE",
+tuneLength = 10
+)
+print(model_DeltaCq)
+model_DeltaCq2 <- train(
+Age ~  DeltaCq, data = myDataset3, method = "lm",
+trControl = trainControl("LOOCV",savePredictions = "all"),
+preProcess = c("center", "scale"),
+metric = "MdAE",
+tuneLength = 10
+)
+print(model_DeltaCq2)
+m1<-lm(Age ~  DeltaCq, data=myDataset3)
+summary(m1)
+myDataset3$predictionsDeltaCq <-model_DeltaCq$pred[,1]
+myDataset3$MAE_model_DeltaCq<-abs(myDataset3$Age-myDataset3$predictionsDeltaCq)
+myDataset3$AgeClasses<-cut(myDataset3$Age,breaks=c(20,30,40,50,60,70,80,90,100), right=FALSE)
+write.csv(myDataset3,file="myDataset3.csv",na="", row.names = FALSE)
+pn_DeltaCq<-ggplot(myDataset3,aes(DeltaCq, Age)) + geom_point() +
+geom_smooth(method='lm', formula= y~x) +xlab("DeltaCq (Cq-TBP - Cq-sjTREC)") + ylab("Età") + geom_text(x = -15, y = 30, label = "MAD=8.4; R-square=57.3%", parse = FALSE) +  theme_bw()
+pn_DeltaCq + theme_bw() #+labs(color='Classi di etò')
+pn_DeltaCq  +  geom_label_repel(data= myDataset3 %>% filter(ID %in% myBadSample), aes(label = ID), box.padding = 0.35,  angle = 45, point.padding = 0.5, segment.color = 'grey50')
+myDataset5<-myDataset3 %>%  group_by(AgeClasses) %>%  summarise(medianErr_DeltaCq=median(MAE_model_DeltaCq,na.rm=TRUE), N_DeltaCq=length(MAE_model_DeltaCq))
+pn_DeltaCq2<-ggplot(myDataset5,aes(AgeClasses, medianErr_DeltaCq))+ geom_point(aes(col=AgeClasses, size=N_DeltaCq)) +
+geom_smooth(method='lm', formula= y~x) +xlab('Classi di età') + ylab('Median Absolute Error (MAD)')
+pn_DeltaCq2 + theme_bw() +labs(color='Classi di età')
+write.csv(myDataset5,file="ageClasses_sjTREC",na="", row.names = FALSE)
+#by gender
+pn_DeltaCq3<-ggplot(myDataset3,aes(x=DeltaCq, y=Age,group=Sex)) + geom_point() +
+geom_smooth(method='lm', formula= y~x, aes(color=factor(Sex))) +xlab("DeltaCq (Cq-TBP - Cq-sjTREC)") + ylab("Età") +  theme_bw()
+pn_DeltaCq3 + theme_bw() + labs(color='Sesso')
+pn_DeltaCq2 + theme_bw() +labs(color='Classi di età')
+pn_DeltaCq3 + theme_bw() + labs(color='Sesso')
+setwd("C:/Users/Utente/Dropbox/Sito WEB/blogdown")
+install.packages("blogdown")
+install.packages("blogdown")
+install.packages("blogdown")
+blogdown::build_site()
+setwd("C:/Users/Utente/Dropbox/Sito WEB/blogdown")
+blogdown::build_site()
+blogdown::build_site()
+blogdown::build_site()
+blogdown::build_site()
+blogdown::build_site()
+install.packages("blogdown")
+blogdown::build_site()
+blogdown::build_site()
+install.packages("blogdown")
+blogdown::build_site()
+blogdown::install_hugo("0.91.2")
+blogdown::build_site()
