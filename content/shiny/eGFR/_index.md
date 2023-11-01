@@ -1,7 +1,7 @@
 ---
 date: "2021-01-08"
 lastmod: "2021-01-09"
-title: "TECHNIQUES IN FORENSIC GENETICS"
+title: "Estimated Glomerular Filtartion Rate"
 linktitle: Overview
 summary: A survey course in forensic genetics. Explores important topics in the field through current use of DNA polymorphisms for forensic analysis. 
 toc: false
