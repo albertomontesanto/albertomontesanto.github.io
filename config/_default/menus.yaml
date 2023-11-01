@@ -23,7 +23,7 @@ main:
     url: '#posts'
     weight: 50
   - name: Data visualization
-    url: 'Visualizations/'
+    url: 'visualizations/'
     weight: 70
   - name: ShinyApps
     url: 'shiny/'
