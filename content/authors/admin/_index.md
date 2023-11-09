@@ -56,4 +56,5 @@ I am a professor of genetics, currently working to the analysis of the role of h
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/CV.pdf" "newtab" >}}CV{{< /staticref >}}.
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=59LH5AHNQ8XZW)
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=alberto.montesanto%40gmail.com&currency_code=EUR)
