@@ -10,7 +10,7 @@ education:
     institution: University of Calabria
     year: 2008
   - course: PhD in Molecular Bio-pathology 
-    institution: UUniversity of Calabria
+    institution: University of Calabria
     year: 2007
   - course: MSc in Biological Sciences 
     institution: University of Calabria
@@ -55,3 +55,5 @@ social:
 I am a professor of genetics, currently working to the analysis of the role of human nuclear and mitochondrial DNA (epi)genetic variations in human aging and longevity. My research interest is also focused on the development of novel analytical techniques and methodologies to solve current challenges in forensic science (Forensic DNA Phenotyping).
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/CV.pdf" "newtab" >}}CV{{< /staticref >}}.
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=59LH5AHNQ8XZW)
