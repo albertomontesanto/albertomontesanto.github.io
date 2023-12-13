@@ -55,10 +55,7 @@ url_video: ""
 
     
 abstract: 'Objective. The aim is to explore the role of anthropometric traits and sociodemographic characteristics on human survival.
-
 Methods. Anthropometrics and sociodemographic data of 1944 conscripts born in the first decade of the 20th century in rural municipalities of Calabria (Southern Italy) who underwent medical examinations for military service were collected. Medical examinations were linked to individual survival data.
-
 Results. Height and type of occupation influenced life expectancy. For taller men, the risk of mortality increases by about 20% when compared with men with middle height, while farmers exhibited a significant survival advantage compared to those with other working experiences.
-
 Discussion: Height and type of occupation were associated with human mortality. These results are likely to be related to the effect of healthy dietary patterns and physical activity on life expectancy. Further studies are needed to understand to what extent these results obtained in a rural context can be generalized to other contexts.'
 ---
