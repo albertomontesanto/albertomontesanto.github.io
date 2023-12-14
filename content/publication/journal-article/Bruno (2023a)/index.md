@@ -3,10 +3,10 @@ title: "Alzheimer’s disease as a viral disease: Revisiting the infectious hypo
 date: 2023-09-12
 publishDate: 2021-01-05T20:13:52.623034Z
 authors: 
-- Bruno, F
-- Abondio, P
-- Bruno, R
-- Ceraudo, L
+- Bruno F
+- Abondio P
+- Bruno R
+- Ceraudo L
 - Paparazzo, E
 - Citrigno, L
 - Luiselli, D
