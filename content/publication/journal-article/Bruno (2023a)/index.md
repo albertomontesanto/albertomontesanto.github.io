@@ -8,13 +8,13 @@ authors:
 - Bruno R
 - Ceraudo L
 - Paparazzo, E
-- Citrigno, L
-- Luiselli, D
-- Bruni, AC
+- Citrigno L
+- Luiselli D
+- Bruni AC
 - Passarino, G
-- Colao, R
-- Maletta, R
-- Montesanto, A
+- Colao R
+- Maletta R
+- Montesanto A
 
 date: '2023-09-12'
 doi: https://doi.org/10.1016/j.arr.2023.102068
