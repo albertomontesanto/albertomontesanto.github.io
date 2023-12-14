@@ -15,7 +15,6 @@ authors:
 - Passarino G
 - Montesanto A
 
-
 date: '2023-12-09'
 doi: https://doi.org/10.1177/08982643231220436
 featured: false
@@ -41,7 +40,6 @@ tags:
 - life expectancy
 - military registers
 - occupation
-
 
 
 url_code: ""
