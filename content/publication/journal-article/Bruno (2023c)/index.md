@@ -1,4 +1,4 @@
-c---
+---
 title: "Occupation, literacy, anthropometric traits and life expectancy of Italian men born 1900-1910 evidence from military conscription registers"
 date: 2023-12-09
 publishDate: 2023 Dec 9:8982643231220436.
