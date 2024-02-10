@@ -37,7 +37,7 @@ tags:
 
 url_code: ""
 url_dataset: ""
-url_pdf: "pdf/Abbondio (2023) Abbondio_2023.pdf"
+url_pdf: "pdf/Abbondio (2023) Abbondio_2023b.pdf"
 url_poster: ""
 url_project: ""
 url_slides: ""
