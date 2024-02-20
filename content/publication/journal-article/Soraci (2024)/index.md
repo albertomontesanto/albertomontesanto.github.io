@@ -17,7 +17,7 @@ authors:
 - Lattanzio F
 - Biscetti L
 
-date: '2024 Jan 17'
+date: '2024-01-17'
 doi: 10.14336/AD.2023.1001
 featured: false
 # To use the `image` argument, add an image named `featured.jpg/png` to your page's folder.
@@ -31,7 +31,7 @@ projects: []
 publication: '*Aging Dis*'
 publication_types:
 - 2
-publishDate: '2024 Jan 17'
+publishDate: '2024-01-17'
 slides: ''
 summary: ''
 # `tags` are like keywords
