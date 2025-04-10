@@ -6,7 +6,7 @@ bio:
 
 education:
   courses:
-  - course: II level University Master Degree in Computational and Supercomputing Sciences 
+  - course: III level University Master Degree in Computational and Supercomputing Sciences 
     institution: University of Calabria
     year: 2008
   - course: PhD in Molecular Bio-pathology 
